@@ -9,63 +9,8 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-		<style type="text/css">
-			.main {
-				margin-top: 20px;
-			}
-			.quem_vai, .ferias, .input-group {
-				margin-bottom: 5px;
-			}
-			.amarelo {
-				color: yellow;
-			}
-			.vermelho {
-				color: red;
-			}
-			.azul {
-				color: #069;
-			}
-		</style>
-		<script type="text/javascript">
-			$(document).ready(function(){
-				$('.quem_vai').click(function() {
-	  				$.ajax({
-		                type: "post",
-		                dataType: "json",
-		                url: "/convenia/grupo_escolhido",
-		                success: function(data){
-		                	var html = '';
-
-	                        $.each(data, function(i, item){
-								html += '<label class="sr-only" for="exampleInputAmount">Resultado</label>';
-								html += '<div class="input-group">';
-		                		html += '<div class="input-group-addon">Grupo: </div>';
-								html += '<input type="text" class="form-control" id="resultado_grupo" value="' + item + '" disabled>';
-								html += '</div><br>';
-							});
-
-		                	$('.grupos').html(html);
-		                }
-		            });
-		            
-		            return false;
-				});
-
-				$('.ferias').click(function() {
-	  				$.ajax({
-		                type: "post",
-		                dataType: "json",
-		                url: "/convenia/ferias",
-		                data: {data_ferias: $('#data_ferias').val()},
-		                success: function(data){
-		                	alert(data);
-		                }
-		            });
-		            
-		            return false;
-				});
-			});
-		</script>
+		<link rel="stylesheet" type="text/css" href="/assets/main.css">
+		<script src="/assets/main.js"></script>
 	</head>
 	<body>
 		<div class="row">
