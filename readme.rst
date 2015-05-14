@@ -24,3 +24,8 @@ Como padrão do codeigniter as configurações do banco de dados fica em /applic
 Então só colocar os dados do banco local lá.
 
 Para tirar dúvidas só criar issue.
+
+.. image:: https://d2weczhvl823v0.cloudfront.net/reginaldojunior/convenia/trend.png
+   :alt: Bitdeli badge
+   :target: https://bitdeli.com/free
+
