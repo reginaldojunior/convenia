@@ -58,7 +58,7 @@
 		                url: "/convenia/ferias",
 		                data: {data_ferias: $('#data_ferias').val()},
 		                success: function(data){
-		                	$('#ferias').val(data);
+		                	alert(data);
 		                }
 		            });
 		            
@@ -158,13 +158,6 @@
 						</div>
 						<div class="col-md-4">
 							<button type="submit" class="btn btn-danger ferias">Calcular Férias?</button>
-							<div class="form-group">
-								<label class="sr-only" for="ferias">Resultado</label>
-								<div class="input-group">
-									<div class="input-group-addon">Periodo: </div>
-									<input type="text" class="form-control" id="ferias" />
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>	

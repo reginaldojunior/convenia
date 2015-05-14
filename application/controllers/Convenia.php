@@ -68,7 +68,7 @@ class Convenia extends CI_Controller {
 		$data = formatar_data($periodo_aquisitivo);
 		$periodo_concessivo = date('d/m/y', strtotime("+365 days", strtotime($data['resultado'])));
 
-		echo json_encode($periodo_aquisitivo . ' (Periodo Aquisitivo) no ' . $periodo_concessivo . ' até no (Periodo Concessivo)');
+		echo json_encode($periodo_aquisitivo . ' no (Periodo Aquisitivo) ou até ' . $periodo_concessivo . ' no (Periodo Concessivo)');
 	}
 
 	public function salvar_mensagem() {
