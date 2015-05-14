@@ -4,6 +4,8 @@ Resolução dos exercícios
 
 Esse repositorio é referente a resolução dos exercícios.
 
+O controller que contém as resoluções é Convenia.php, para acessar pela url /convenia .
+
 *******************
 Documentação
 *******************
