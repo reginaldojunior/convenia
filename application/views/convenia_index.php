@@ -33,7 +33,7 @@
   							<form action="/convenia/salvar_mensagem" method="post">
 	  							<div class="input-group">
 									<label for="comment">Comentario: </label>
-									<textarea class="form-control" rows="5" id="comment" maxlength="100" name="mensagem"></textarea>
+									<textarea class="form-control" rows="5" id="comment" maxlength="100" name="mensagem" required></textarea>
 								</div>
 								<button class="btn btn-success" type="submit">
 								 	Enviar Mensagem

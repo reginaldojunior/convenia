@@ -73,6 +73,7 @@ class Convenia extends CI_Controller {
 
 	public function salvar_mensagem() {
 		$data = $this->input->post();
+		$data['mensagem'] = htmlentities($data['mensagem']);
 		$data['data_cadastro'] = date('Y-m-d');
 
 		$retorno = $this->db->insert('mensagens', $data);
