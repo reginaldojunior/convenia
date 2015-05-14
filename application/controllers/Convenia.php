@@ -6,6 +6,10 @@ class Convenia extends CI_Controller {
         $this->load->database();
         $this->load->helper('url');
 	}
+
+	/**
+	* Função para view index
+	**/
 	public function index() {
 		$mensagens = $this->db->get('mensagens');
 
@@ -15,6 +19,10 @@ class Convenia extends CI_Controller {
 		$this->load->view('convenia_index',  $dados);
 	}
 
+	/**
+	* Função que faz o algorimo do grupo que vai ser levado
+	* @return String Json com os grupos que serão levados
+	**/
 	public function grupo_escolhido() {
 		$alfabeto = range('A', 'Z');
 
@@ -59,6 +67,10 @@ class Convenia extends CI_Controller {
 		echo json_encode($resultado);
 	}
 
+	/**
+	* Calcula férias considerado periodo de entrada
+	* @return String Json com o periodo aquisito e periodo convessivo
+	**/
 	public function ferias() {
 		$data = $this->input->post();
 		$data = formatar_data($data['data_ferias']);
@@ -71,6 +83,9 @@ class Convenia extends CI_Controller {
 		echo json_encode($periodo_aquisitivo . ' no (Periodo Aquisitivo) ou até ' . $periodo_concessivo . ' no (Periodo Concessivo)');
 	}
 
+	/**
+	* Salva a mensagem no banco de dados
+	**/
 	public function salvar_mensagem() {
 		$data = $this->input->post();
 		$data['mensagem'] = htmlentities($data['mensagem']);
